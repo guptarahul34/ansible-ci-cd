@@ -1,2 +1,2 @@
 [node1]
-172.31.88.150
+172.31.88.150 ansible_user=rahul
