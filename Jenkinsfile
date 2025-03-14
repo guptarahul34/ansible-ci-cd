@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Ansible") {
             steps {
-                sh "ansible all -m ping -i hosts"
+                sh "ansible all -m ping -i hosts -u rahul"
             }
         }        
     }
