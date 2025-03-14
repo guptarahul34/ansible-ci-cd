@@ -4,7 +4,6 @@ pipeline {
         stage("Ansible") {
             steps {
                 script {
-                    #!/usr/bin/expect -f
                     set timeout 5
                     spawn su - rahul
                     expect "Password:"
