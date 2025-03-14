@@ -1,0 +1,13 @@
+---
+- name: Check Git Version
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Get Git version
+      command: git --version
+      register: git_version_output
+      changed_when: false  # Ensures Ansible doesn't mark this task as changed
+
+    - name: Display Git version
+      debug:
+        msg: "Git Version: {{ git_version_output.stdout }}"
