@@ -4,7 +4,7 @@ pipeline {
         stage("Ansible") {
             steps {
                 sh 'whoami'
-                sh "ansible all -m ping -i hosts -u rahul"
+                sh "sudo ansible all -m ping -i hosts -u rahul"
             }
         }        
     }
