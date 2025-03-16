@@ -1,0 +1,9 @@
+---
+- name: This playbook will install the git on the target server 172.31.88.150.
+  hosts: all
+  become: yes
+  tasks:
+  - name: Install git in the target server
+    yum:
+      name: git
+      state: present
