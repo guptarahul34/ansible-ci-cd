@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Ansible") {
             steps {
-                sh "ansible all -m ping -i hosts"
+                sh "ansible-playbook git_install.yml -i hosts"
             }
         }        
     }
