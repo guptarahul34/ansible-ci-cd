@@ -4,7 +4,7 @@ pipeline {
         stage("Ansible") {
             steps {
                 ansiColor('xterm') {
-                    sh "ANSIBLE_FORCE_COLOR=1 ansible-playbook git_install.yml -i hosts"
+                    sh "ansible-playbook git_install.yml -i hosts"
                 }
             }
         }        
