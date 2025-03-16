@@ -12,7 +12,7 @@ pipeline {
         stage("Install Tree Package") {
             steps {
                 ansiColor('xterm') {
-                    sh "ansible all -m yum -a name=tree"
+                    sh "ansible all -m yum -a name=tree -i hosts"
                 }
             }
         }
